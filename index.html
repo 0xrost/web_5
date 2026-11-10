@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rostyslav Ivankiv — CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" type="button" aria-pressed="false">🌙 Night mode</button>
+        <h1>Rostyslav Ivankiv</h1>
+        <p>Backend Developer (AI / RAG)</p>
+        <ul>
+            <li>Email: <a href="mailto:ol.rostyslaw@gmail.com">ol.rostyslaw@gmail.com</a></li>
+            <li>Location: Lviv, Ukraine</li>
+            <li>Phone: +380686894116</li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>
+                Backend developer with hands-on experience building RAG pipelines
+                and REST APIs using FastAPI and PostgreSQL. Developed production
+                systems for AI-powered document analysis and a full-stack application
+                for a medical equipment maintenance service company. Strong grasp
+                of system architecture, async programming, and data processing.
+                Expanding into embedded systems and firmware development.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <article>
+                <h3>Backend Developer (AI / RAG), University Project, Remote</h3>
+                <p><em>Feb 2026 — Current</em></p>
+                <p class="exp-desc">
+                    Developed backend for an AI-powered contract analysis system.
+                    Implemented RAG (Retrieval-Augmented Generation) pipeline for
+                    document processing and semantic search. Used PostgreSQL with
+                    vector extensions for storing and querying embeddings. Designed
+                    and implemented REST API for document analysis and result
+                    delivery. Integrated notification system for processing status
+                    updates. Handled text preprocessing, embeddings generation, and
+                    similarity search.
+                </p>
+                <button type="button" class="toggle-desc">Show more</button>
+            </article>
+
+            <article>
+                <h3>Full-Stack Developer, Freelance</h3>
+                <p><em>Dec 2025 — Current</em></p>
+                <p class="exp-desc">
+                    Developed a full-stack web application for a medical equipment
+                    maintenance service company using FastAPI (Python) and React
+                    (TypeScript), supporting internal business workflows. Designed
+                    and implemented REST API handling service operations and
+                    business logic. Built a responsive and user-friendly frontend
+                    following modern UI practices. Ensured seamless integration
+                    between frontend and backend systems. Designed scalable and
+                    maintainable project architecture with clean modular code.
+                </p>
+                <button type="button" class="toggle-desc">Show more</button>
+            </article>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <article>
+                <h3>Bachelor's Degree, Cybersecurity</h3>
+                <p>Lviv Polytechnic National University, Lviv, Ukraine</p>
+                <p><em>Jan 2025 — Current</em></p>
+                <p>
+                    Studying cybersecurity, computer systems, and network security.
+                    Gaining knowledge in secure software development and system
+                    architecture. Working on backend and AI-related projects as
+                    part of academic program.
+                </p>
+            </article>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <input type="search" id="skills-filter" placeholder="Filter skills…" aria-label="Filter skills">
+            <ul id="skills-list">
+                <li>Python</li>
+                <li>TypeScript</li>
+                <li>Embedded C</li>
+                <li>React</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>FastAPI</li>
+                <li>REST APIs</li>
+                <li>Asynchronous programming</li>
+                <li>PostgreSQL</li>
+                <li>Redis</li>
+                <li>MongoDB</li>
+                <li>MinIO</li>
+                <li>RabbitMQ</li>
+            </ul>
+            <p id="skills-empty" hidden>No skills match your search.</p>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>Ukrainian</li>
+                <li>English (B1)</li>
+                <li>Polish (B2)</li>
+            </ul>
+        </section>
+
+        <section id="hackathons">
+            <h2>Hackathons</h2>
+            <p>
+                Participated in <strong>BEST::HACKathOn 2026</strong> (Lviv) —
+                24-hour offline hackathon, Challenge track. Worked in a team on
+                a real business case from an industry partner.
+            </p>
+        </section>
+
+        <section id="hobbies">
+            <h2>Hobbies and Interests</h2>
+            <ul>
+                <li>Building small electronics and firmware projects</li>
+                <li>Embedded systems and microcontroller development</li>
+                <li>System-level programming</li>
+            </ul>
+        </section>
+
+        <section id="reviews">
+            <h2>Reviews from Previous Employers</h2>
+            <p id="reviews-status" role="status">Loading reviews…</p>
+            <ul id="reviews-list"></ul>
+        </section>
+    </main>
+
+    <div id="feedback-modal" class="modal" hidden>
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+            <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+            <h2 id="feedback-title">Feedback</h2>
+            <p class="modal-subtitle">Have a question or an offer? Send me a message.</p>
+            <form id="feedback-form" action="https://formspree.io/f/mrpqzpny" method="POST">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+380XXXXXXXXX">
+                </div>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="current-year">2026</span> Rostyslav Ivankiv. CV — Lab 4, JavaScript.</p>
+        <p>
+            Contact: <a href="mailto:ol.rostyslaw@gmail.com">ol.rostyslaw@gmail.com</a>
+        </p>
+        <div id="system-info">
+            <h3>System info (localStorage)</h3>
+            <dl id="storage-list"></dl>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
